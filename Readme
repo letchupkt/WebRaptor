@@ -1,5 +1,7 @@
 # 🕷️ WebRaptor - Automated Web Pentesting Tool
 
+![WebRaptor Logo](https://raw.githubusercontent.com/letchupkt/webraptor/refs/heads/main/logo.ico)
+
 **WebRaptor** is a terminal-based CLI tool for automated web penetration testing. It streamlines common web security assessments through an interactive shell interface.
 
 ---
@@ -51,6 +53,7 @@ python3 main.py
 
 ---
 
+![WebRaptor Demo](https://raw.githubusercontent.com/letchupkt/webraptor/refs/heads/main/webrapor.png)
 
 
 
