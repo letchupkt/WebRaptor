@@ -452,6 +452,14 @@ class JSSecurityAnalyzer:
         print(f"           DETAILED JAVASCRIPT SECURITY ANALYSIS REPORT")
         print(f"{'='*80}{Style.RESET_ALL}")
         
+        # Get config safely
+        try:
+            config = Config()
+            verbose = config.verbose
+        except Exception as e:
+            print(f"{Fore.YELLOW}[!] Error accessing config: {e}{Style.RESET_ALL}")
+            verbose = False
+        
         # Summary statistics
         total_files = len(all_findings)
         total_lines = sum(f.get('lines', 0) for f in all_findings)
@@ -528,7 +536,7 @@ class JSSecurityAnalyzer:
                 # Show top 5 findings for each pattern
                 for vuln in vuln_list[:5]:
                     print(f"    Line {vuln['line']}: {vuln['match']}")
-                    if Config().verbose:  # If verbose mode is enabled
+                    if verbose:  # If verbose mode is enabled
                         for context_line in vuln.get('context', [])[:3]:
                             print(f"      {context_line}")
                 
@@ -536,17 +544,20 @@ class JSSecurityAnalyzer:
                     print(f"    ... and {len(vuln_list) - 5} more")
         
         # Save results to config
-        Config().add_result('jsanalyze_advanced', {
-            'summary': {
-                'files_analyzed': total_files,
-                'total_lines': total_lines,
-                'total_size': total_size,
-                'total_findings': total_vulns
-            },
-            'security_issues': all_security_issues,
-            'external_domains': list(all_domains),
-            'detailed_findings': all_findings
-        })
+        try:
+            config.add_result('jsanalyze_advanced', {
+                'summary': {
+                    'files_analyzed': total_files,
+                    'total_lines': total_lines,
+                    'total_size': total_size,
+                    'total_findings': total_vulns
+                },
+                'security_issues': all_security_issues,
+                'external_domains': list(all_domains),
+                'detailed_findings': all_findings
+            })
+        except Exception as e:
+            print(f"{Fore.YELLOW}[!] Failed to save results to config: {e}{Style.RESET_ALL}")
 
 def run(target: str):
     """Main execution function for the module"""
@@ -556,6 +567,7 @@ def run(target: str):
     
     try:
         analyzer = JSSecurityAnalyzer()
+        config = Config()  # Initialize config once
         
         # Extract JS file URLs from target page
         print(f"{Fore.BLUE}[*] Discovering JavaScript files...{Style.RESET_ALL}")
@@ -563,7 +575,7 @@ def run(target: str):
         
         if not js_urls:
             print(f"{Fore.YELLOW}[-] No JavaScript files found on page{Style.RESET_ALL}")
-            Config().add_result('jsanalyze_advanced', 'No JavaScript files found')
+            config.add_result('jsanalyze_advanced', 'No JavaScript files found')
             return
         
         print(f"{Fore.GREEN}[+] Found {len(js_urls)} JavaScript files to analyze{Style.RESET_ALL}")
@@ -593,14 +605,17 @@ def run(target: str):
             analyzer.generate_detailed_report(all_findings)
         else:
             print(f"{Fore.YELLOW}[-] No files could be analyzed successfully{Style.RESET_ALL}")
-            Config().add_result('jsanalyze_advanced', 'No files could be analyzed')
+            config.add_result('jsanalyze_advanced', 'No files could be analyzed')
         
         execution_time = time.time() - start_time
         print(f"\n{Fore.GREEN}[+] JavaScript analysis completed in {execution_time:.2f} seconds{Style.RESET_ALL}")
     
     except Exception as e:
         print(f"{Fore.RED}[-] Error during JavaScript analysis: {e}{Style.RESET_ALL}")
-        Config().add_result('jsanalyze_advanced', f'Error during analysis: {str(e)}')
+        try:
+            Config().add_result('jsanalyze_advanced', f'Error during analysis: {str(e)}')
+        except Exception as config_error:
+            print(f"{Fore.RED}[!] Failed to save error to config: {config_error}{Style.RESET_ALL}")
 
 if __name__ == "__main__":
     # For testing purposes
