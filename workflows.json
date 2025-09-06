@@ -1,0 +1,300 @@
+{
+  "workflows": {
+    "full_recon": {
+      "name": "Full Reconnaissance",
+      "description": "Comprehensive reconnaissance using all available tools",
+      "steps": [
+        {
+          "name": "subdomain_enumeration",
+          "module": "advanced_subenum",
+          "description": "Advanced subdomain enumeration"
+        },
+        {
+          "name": "waybackurls_discovery",
+          "module": "waybackurls_scanner",
+          "description": "Historical URL discovery"
+        },
+        {
+          "name": "port_scanning",
+          "module": "portscan",
+          "description": "Port scanning and service detection"
+        },
+        {
+          "name": "technology_detection",
+          "module": "tech_detect",
+          "description": "Web technology detection"
+        },
+        {
+          "name": "directory_bruteforce",
+          "module": "advanced_tools",
+          "description": "Directory and file bruteforce"
+        },
+        {
+          "name": "vulnerability_scanning",
+          "module": "nuclei_scanner",
+          "description": "Vulnerability scanning with Nuclei"
+        }
+      ]
+    },
+    "bug_bounty": {
+      "name": "Bug Bounty Pipeline",
+      "description": "Complete bug bounty automation pipeline",
+      "steps": [
+        {
+          "name": "subdomain_discovery",
+          "module": "advanced_subenum",
+          "description": "Subdomain discovery and enumeration"
+        },
+        {
+          "name": "historical_urls",
+          "module": "waybackurls_scanner",
+          "description": "Historical URL analysis"
+        },
+        {
+          "name": "port_scanning",
+          "module": "portscan",
+          "description": "Port scanning"
+        },
+        {
+          "name": "web_crawling",
+          "module": "advanced_tools",
+          "description": "Web crawling and directory bruteforce"
+        },
+        {
+          "name": "technology_fingerprinting",
+          "module": "tech_detect",
+          "description": "Technology fingerprinting"
+        },
+        {
+          "name": "vulnerability_scanning",
+          "module": "nuclei_scanner",
+          "description": "Vulnerability scanning"
+        },
+        {
+          "name": "sql_injection_testing",
+          "module": "sqlmap_scanner",
+          "description": "SQL injection testing"
+        },
+        {
+          "name": "xss_testing",
+          "module": "xss",
+          "description": "XSS vulnerability testing"
+        },
+        {
+          "name": "report_generation",
+          "module": "report",
+          "description": "Comprehensive report generation"
+        }
+      ]
+    },
+    "stealth_scan": {
+      "name": "Stealth Scan",
+      "description": "Low-profile scanning to avoid detection",
+      "steps": [
+        {
+          "name": "passive_subdomain_enum",
+          "module": "advanced_subenum",
+          "description": "Passive subdomain enumeration"
+        },
+        {
+          "name": "historical_analysis",
+          "module": "waybackurls_scanner",
+          "description": "Historical URL analysis"
+        },
+        {
+          "name": "light_port_scan",
+          "module": "portscan",
+          "description": "Light port scanning"
+        },
+        {
+          "name": "technology_detection",
+          "module": "tech_detect",
+          "description": "Technology detection"
+        }
+      ]
+    },
+    "web_app_scan": {
+      "name": "Web Application Scan",
+      "description": "Focused web application security testing",
+      "steps": [
+        {
+          "name": "technology_detection",
+          "module": "tech_detect",
+          "description": "Web technology detection"
+        },
+        {
+          "name": "directory_bruteforce",
+          "module": "advanced_tools",
+          "description": "Directory and file bruteforce"
+        },
+        {
+          "name": "parameter_discovery",
+          "module": "waybackurls_scanner",
+          "description": "Parameter discovery from historical data"
+        },
+        {
+          "name": "vulnerability_scanning",
+          "module": "nuclei_scanner",
+          "description": "Vulnerability scanning"
+        },
+        {
+          "name": "sql_injection_testing",
+          "module": "sqlmap_scanner",
+          "description": "SQL injection testing"
+        },
+        {
+          "name": "xss_testing",
+          "module": "xss",
+          "description": "XSS testing"
+        },
+        {
+          "name": "screenshot_capture",
+          "module": "screenshot",
+          "description": "Screenshot capture"
+        }
+      ]
+    },
+    "api_testing": {
+      "name": "API Security Testing",
+      "description": "API endpoint discovery and security testing",
+      "steps": [
+        {
+          "name": "api_discovery",
+          "module": "waybackurls_scanner",
+          "description": "API endpoint discovery"
+        },
+        {
+          "name": "parameter_analysis",
+          "module": "advanced_tools",
+          "description": "Parameter analysis"
+        },
+        {
+          "name": "vulnerability_scanning",
+          "module": "nuclei_scanner",
+          "description": "API vulnerability scanning"
+        },
+        {
+          "name": "sql_injection_testing",
+          "module": "sqlmap_scanner",
+          "description": "SQL injection testing"
+        }
+      ]
+    },
+    "infrastructure_scan": {
+      "name": "Infrastructure Scan",
+      "description": "Infrastructure and network security assessment",
+      "steps": [
+        {
+          "name": "subdomain_enumeration",
+          "module": "advanced_subenum",
+          "description": "Subdomain enumeration"
+        },
+        {
+          "name": "port_scanning",
+          "module": "portscan",
+          "description": "Comprehensive port scanning"
+        },
+        {
+          "name": "service_detection",
+          "module": "tech_detect",
+          "description": "Service detection and fingerprinting"
+        },
+        {
+          "name": "vulnerability_scanning",
+          "module": "nuclei_scanner",
+          "description": "Infrastructure vulnerability scanning"
+        }
+      ]
+    },
+    "comprehensive_scan": {
+      "name": "Comprehensive Security Scan",
+      "description": "Complete security assessment using all available tools",
+      "steps": [
+        {
+          "name": "subdomain_discovery",
+          "module": "advanced_subenum",
+          "description": "Subdomain discovery"
+        },
+        {
+          "name": "historical_urls",
+          "module": "waybackurls_scanner",
+          "description": "Historical URL discovery"
+        },
+        {
+          "name": "port_scanning",
+          "module": "portscan",
+          "description": "Port scanning"
+        },
+        {
+          "name": "technology_detection",
+          "module": "tech_detect",
+          "description": "Technology detection"
+        },
+        {
+          "name": "web_crawling",
+          "module": "advanced_tools",
+          "description": "Web crawling and directory bruteforce"
+        },
+        {
+          "name": "vulnerability_scanning",
+          "module": "nuclei_scanner",
+          "description": "Vulnerability scanning"
+        },
+        {
+          "name": "web_vulnerability_scanning",
+          "module": "nikto_scanner",
+          "description": "Web vulnerability scanning"
+        },
+        {
+          "name": "sql_injection_testing",
+          "module": "sqlmap_scanner",
+          "description": "SQL injection testing"
+        },
+        {
+          "name": "xss_testing",
+          "module": "xss",
+          "description": "XSS testing"
+        },
+        {
+          "name": "screenshot_capture",
+          "module": "screenshot",
+          "description": "Screenshot capture"
+        },
+        {
+          "name": "report_generation",
+          "module": "report",
+          "description": "Comprehensive report generation"
+        }
+      ]
+    }
+  },
+  "tool_categories": {
+    "reconnaissance": [
+      "advanced_subenum",
+      "waybackurls_scanner",
+      "portscan",
+      "tech_detect"
+    ],
+    "vulnerability_scanning": [
+      "nuclei_scanner",
+      "nikto_scanner",
+      "sqlmap_scanner",
+      "xss"
+    ],
+    "web_testing": [
+      "advanced_tools",
+      "screenshot",
+      "spli"
+    ],
+    "reporting": [
+      "report"
+    ]
+  },
+  "default_configurations": {
+    "timeout": 300,
+    "threads": 20,
+    "output_format": "html",
+    "auto_save": true,
+    "log_level": "INFO"
+  }
+}

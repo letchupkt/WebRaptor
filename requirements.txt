@@ -14,7 +14,7 @@ socket  # Note: Built-in, no need to install
 
 # Security scanning
 pyOpenSSL>=20.0.1
-cryptography>=3.4.7
+psutil>=5.8.0
 
 # Data parsing
 lxml>=4.6.3
@@ -34,3 +34,80 @@ aiohttp>=3.7.4
 
 # Plotting (for visualization)
 plotly>=5.0.0
+
+# Bug bounty automation tools
+nuclei>=2.9.0
+subfinder>=2.5.0
+httpx>=1.3.0
+gobuster>=3.1.0
+ffuf>=1.5.0
+sqlmap>=1.7.0
+wfuzz>=3.1.0
+wafw00f>=2.2.0
+dnsrecon>=1.1.0
+theharvester>=4.0.0
+sublist3r>=1.1.0
+knockpy>=1.0.0
+arjun>=3.0.0
+
+# Additional dependencies for new modules
+pyyaml>=6.0
+curses-menu>=0.6.0
+
+# Additional security tools
+python-nmap>=0.7.1
+python-masscan>=0.1.6
+python-zmap>=0.1.0
+python-shodan>=1.28.0
+censys>=2.0.0
+virustotal-api>=1.1.11
+securitytrails>=1.0.0
+
+# Exploitation frameworks
+metasploit-framework>=6.0.0
+exploitdb>=2.0.0
+
+# Web application testing
+burp-suite-api>=1.0.0
+owasp-zap-api>=0.0.1
+arachni>=1.0.0
+
+# Network analysis
+scapy>=2.4.5
+netaddr>=0.8.0
+netifaces>=0.11.0
+
+# Data analysis and reporting
+pandas>=1.3.0
+numpy>=1.21.0
+matplotlib>=3.4.0
+seaborn>=0.11.0
+
+# Configuration and utilities
+pyyaml>=6.0
+configparser>=5.0.0
+click>=8.0.0
+tqdm>=4.62.0
+tabulate>=0.9.0
+
+# API integrations
+github3.py>=3.0.0
+gitpython>=3.1.0
+slack-sdk>=3.0.0
+discord.py>=2.0.0
+
+# Database support
+sqlalchemy>=1.4.0
+psycopg2-binary>=2.9.0
+pymongo>=4.0.0
+
+# Machine learning for vulnerability detection
+scikit-learn>=1.0.0
+tensorflow>=2.8.0
+torch>=1.10.0
+
+# Additional utilities
+python-dotenv>=0.19.0
+schedule>=1.1.0
+watchdog>=2.1.0
+psutil>=5.8.0
