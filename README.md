@@ -519,7 +519,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Documentation**: [Wiki](https://github.com/letchu_pkt/WebRaptor/wiki)
 - **Issues**: [GitHub Issues](https://github.com/letchu_pkt/WebRaptor/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/letchu_pkt/WebRaptor/discussions)
-- **Email**: support@webraptor.com
+- **Email**: letchupkt.dev@gmail.com
 
 ## 🔗 Links
 
@@ -532,3 +532,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **⚠️ Disclaimer**: This tool is for educational and authorized testing purposes only. Users are responsible for complying with applicable laws and regulations. The authors are not responsible for any misuse of this tool.
 
 **Made with ❤️ by [LakshmikanthanK](https://github.com/letchu_pkt)**
+
