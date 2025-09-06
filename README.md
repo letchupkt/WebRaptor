@@ -6,6 +6,8 @@
 [![Author](https://img.shields.io/badge/author-LakshmikanthanK-orange.svg)](https://github.com/letchu_pkt)
 
 ## 🚀 Overview
+<img width="1378" height="728" alt="image" src="https://github.com/user-attachments/assets/d11be7b5-9f08-46a4-94cb-66a2be91f5bf" />
+
 
 WebRaptor is a comprehensive, professional-grade bug bounty automation tool that integrates 50+ security tools into a unified platform. It provides automated reconnaissance, vulnerability scanning, exploitation, and reporting capabilities for complete security assessments.
 
@@ -532,4 +534,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **⚠️ Disclaimer**: This tool is for educational and authorized testing purposes only. Users are responsible for complying with applicable laws and regulations. The authors are not responsible for any misuse of this tool.
 
 **Made with ❤️ by [LakshmikanthanK](https://github.com/letchu_pkt)**
+
 
